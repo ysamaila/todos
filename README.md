@@ -46,14 +46,17 @@ To run this project, you need the following installed on your machine:
 # API Endpoints
 
 ## Get All Todos
-` URL: /todo
+``` 
+URL: /todo
 Method: GET
 Description: Retrieves all the todos.
 Response:
 200 OK: List of todos.`
+```
 
 ## Get Todo by ID
-`URL: /todo/:id
+```
+URL: /todo/:id
 Method: GET
 Description: Retrieves a specific todo by its ID.
 Parameters:
@@ -61,9 +64,11 @@ id (required): The ID of the todo to retrieve.
 Response:
 200 OK: The todo item.
 404 Not Found.`
+```
 
 ## Create a New Todo
-`URL: /todo
+```
+URL: /todo
 Method: POST
 Description: Creates a new todo item.
 Request Body:
@@ -72,37 +77,45 @@ description (string, optional): The description of the todo item.
 completed (boolean, optional): The completion status of the todo item.
 Response:
 201 Created: The created todo item.`
+```
 
 
 ## Update Todo by ID
-`URL: /todo/:id
+```
+URL: /todo/:id
 Method: PUT
-Description: Updates the description and completion status of an existing todo item.`
+Description: Updates the description and completion status of an existing todo item.
+```
 
 ### Route Parameters:
-`id (required): The ID of the todo to update.`
+```
+id (required): The ID of the todo to update.
+```
 
 ### Query Parameters:
-`description (string, optional): New description of the todo item.
+```
+description (string, optional): New description of the todo item.
 completed (boolean, optional): New completion status of the todo item.
 Response:
 200 OK: The updated todo item.
-404 Not Found.`
-
+404 Not Found.
+```
 
 ## Delete Todo by ID
-`URL: /todo/:id
-Method: DELETE
-Description: Deletes a todo item by its ID.
-Parameters:
-id (required): The ID of the todo to delete.
-Response:
-200 OK: Successfully deleted.
-404 Not Found.`
+  ```
+  URL: /todo/:id
+  Method: DELETE
+  Description: Deletes a todo item by its ID.
+  Parameters:
+  id (required): The ID of the todo to delete.
+  Response:
+  200 OK: Successfully deleted.
+  404 Not Found.
+```
 
 ## Folder Structure
-
-    ```src/
+```
+    src/
     ├── app.controller.ts        # The main controller
     ├── app.module.ts            # The root module
     ├── app.service.ts           # The main service (Later deleted)
@@ -111,5 +124,7 @@ Response:
     │   ├── todo.service.ts      # Service to manage todo logic and data interaction
     │   ├── todo.dto.ts          # Data Transfer Object for validating todo input
     ├── main.ts                  # Application entry point
+
+```
 
 ## Swagger Docs not integrated. Thank you.
